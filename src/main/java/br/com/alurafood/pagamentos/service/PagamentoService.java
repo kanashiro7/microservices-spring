@@ -37,6 +37,7 @@ public class PagamentoService {
     }
 
     //Criando um método para criar um pagamento
+    //Setar o status como CRIADO - não precisando passar o status no corpo da requisição
     public PagamentoDTO criarPagamento (PagamentoDTO dto) {
         Pagamento pagamento = modelMapper.map(dto, Pagamento.class);
         pagamento.setStatus(Status.CRIADO);
